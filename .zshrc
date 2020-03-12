@@ -45,6 +45,10 @@ ZSH_THEME="honukai"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Disable warning about insecure completions, since mulitple users on the same machine needs
+# group read/write permissions
+ZSH_DISABLE_COMPFIX="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
