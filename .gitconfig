@@ -32,6 +32,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+	editor = nano
 [color "branch"]
 	current = yellow reverse
 	local = yellow
