@@ -21,11 +21,13 @@ Let's go!
 	
 		[user]
 			useConfigOnly = true
+			email = <email>
+			name = <name>
 		[credential]
 			helper = osxkeychain
 
-* read and run parts of `setup-a-new-machine.sh`
 * Install [nvm](https://github.com/creationix/nvm#installation) and node
+* read and run parts of `setup-a-new-machine.sh`
 * read and run `npm-install.sh`
 * use it. yay!
 
