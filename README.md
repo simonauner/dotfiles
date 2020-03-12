@@ -25,11 +25,8 @@ Let's go!
 			helper = osxkeychain
 
 * read and run parts of `setup-a-new-machine.sh`
-* read and run `symlink-setup.sh`
 * Install [nvm](https://github.com/creationix/nvm#installation) and node
 * read and run `npm-install.sh`
-* Install sublime package manager: https://packagecontrol.io/installation
-* Clone sublime settings from https://github.com/simonauner/sublime to `Packages/User` in Sublime settings folder
 * use it. yay!
 
 #### what you get
