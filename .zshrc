@@ -111,6 +111,15 @@ alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 nvm use default # get node on the command line whenever a new shell is started
+
+# Automatically list directory contents on `cd`.
+auto-ls () {
+	emulate -L zsh;
+	# explicit sexy ls'ing as aliases arent honored in here.
+	hash gls >/dev/null 2>&1 && CLICOLOR_FORCE=1 gls -aFh --color --group-directories-first || ls
+}
+chpwd_functions=( auto-ls $chpwd_functions )
