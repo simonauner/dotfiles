@@ -1,13 +1,8 @@
 
 
 # to maintain cask ....
-#     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup`
+# brew update && brew cleanup
 
-
-# Install native apps
-
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # daily
 #brew cask install alfred
@@ -17,10 +12,10 @@ brew tap caskroom/versions
 #brew cask install onepassword
 #brew cask install rescuetime
 # cask install flux
-brew cask install spectacle
+brew install --cask rectangle
 
 # dev
-# brew install Caskroom/versions/iterm2-nightly
+brew install --cask iterm2
 #brew install Caskroom/versions/sublime-text3
 #brew cask install imagealpha
 #brew cask install imageoptim
@@ -42,7 +37,7 @@ brew cask install spectacle
 # less often
 #brew cask install disk-inventory-x
 #brew cask install screenflow4 # 4 specifically not 5.
-#brew cask install vlc
+brew install --cask vlc
 #brew cask install keycastr
 
 
