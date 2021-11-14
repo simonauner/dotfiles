@@ -8,10 +8,9 @@ Based off [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles), which 
 
 Some applications are worth installing manually since a Brew install will mess with future updates:
 
-- Chrome and Canary
+- Browsers
 - Slack
-- Sublime
-- iterm2
+- VSCode
 
 Let's go!
 
@@ -27,28 +26,27 @@ Let's go!
       	helper = osxkeychain
 
 - read and run parts of `setup-a-new-machine.sh`
-- read and run `npm-install.sh`
 - use it. yay!
 
 #### what you get
 
-- git config (Paul Irish's)
 - Mac OSX default settings (Paul Irish's)
-- homebrew
+- homebrew apps:
   - git
   - ack
   - kdiff3
+  - jq
+  - z
 - homebrew cask
-  - ~~dropbox~~
-  - spectacle
-  - ~~iterm2-nightly~~ Isn't signed through Brew, needs to be manually installed
-  - ~~sublime-text3~~
-  - ~~spotify~~
-  - ~~chrome~~
-  - ~~chrome canary~~
-- z
+  - rectangle for window management
+  - iterm2
 - oh-my-zsh
-- aliases:
+  - git
+  - history substring search
+  - autosuggestions
+  - syntax highlighting on terminal commands
+- functions:
+  - `n`: load `nvm` and use default version
   - `mkdc`: create directory and `cd` into it
 
 ## Migration
@@ -57,5 +55,3 @@ Steps to migrate from another computer.
 
 - Export iterm config
 - Copy `.extra`
-- Copy useful tools from `/usr/local/bin`
-  - `gcred`
