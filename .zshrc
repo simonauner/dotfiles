@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # Load our dotfiles
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
-for file in ~/.{extra,aliases}; do
+for file in ~/.{extra,aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
@@ -106,10 +106,6 @@ bindkey "^[^[[C" forward-word
 #source /usr/local/dev-env/ansible/mac_profile
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm use default # get node on the command line whenever a new shell is started
 
 # Automatically list directory contents on `cd`.
 auto-ls () {
