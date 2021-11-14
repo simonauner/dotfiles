@@ -20,7 +20,7 @@ brew tap caskroom/versions
 brew cask install spectacle
 
 # dev
-brew install Caskroom/versions/iterm2-nightly
+# brew install Caskroom/versions/iterm2-nightly
 #brew install Caskroom/versions/sublime-text3
 #brew cask install imagealpha
 #brew cask install imageoptim
