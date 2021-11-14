@@ -1,5 +1,12 @@
-# copy paste this file in bit by bit.
+#
+#
+#
+# HOW TO USE THIS FILE
+# ====================
+# Copy paste this file in bit by bit.
 # don't run it.
+#
+#
   echo "do not run this script in one go. hit ctrl-c NOW"
   read -n 1
 
@@ -33,6 +40,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # fish-like syntax highlighting in terminal
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 # go read mathias, paulmillr, gf3, alraa's dotfiles to see what to update with.
 

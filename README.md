@@ -26,7 +26,6 @@ Let's go!
       [credential]
       	helper = osxkeychain
 
-- Install [nvm](https://github.com/creationix/nvm#installation) and node
 - read and run parts of `setup-a-new-machine.sh`
 - read and run `npm-install.sh`
 - use it. yay!
