@@ -16,7 +16,7 @@
 #
 # install all the things
 ./brew.sh
-./brew-cask.sh
+# ./brew-cask.sh
 
 
 # Install oh-my-zsh

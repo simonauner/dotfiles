@@ -6,8 +6,8 @@
 
 # Install native apps
 
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+# brew install caskroom/cask/brew-cask
+# brew tap caskroom/versions
 
 # daily
 #brew cask install alfred
@@ -17,10 +17,10 @@ brew tap caskroom/versions
 #brew cask install onepassword
 #brew cask install rescuetime
 # cask install flux
-brew cask install spectacle
+# brew cask install spectacle
 
 # dev
-brew install Caskroom/versions/iterm2-nightly
+# brew install Caskroom/versions/iterm2-nightly
 #brew install Caskroom/versions/sublime-text3
 #brew cask install imagealpha
 #brew cask install imageoptim
