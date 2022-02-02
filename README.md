@@ -14,6 +14,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - VSCode
 - Spoitfy
 - https://rectangleapp.com/
+- BeardedSpice for media controls
 
 Let's go!
 
