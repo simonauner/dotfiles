@@ -114,3 +114,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 nvm use default # get node on the command line whenever a new shell is started
+
+# Add brew to command-line
+eval "$(/opt/homebrew/bin/brew shellenv)"
