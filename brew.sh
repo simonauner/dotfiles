@@ -38,7 +38,7 @@ brew upgrade
 
 
 # Install other useful binaries
-brew install ack
+# brew install ack
 #install exiv2
 brew install git
 #brew install imagemagick --with-webp
@@ -49,7 +49,7 @@ brew install git
 #brew install zopfli
 #brew install ffmpeg --with-libvpx
 #brew install android-platform-tools
-brew install kdiff3
+# brew install kdiff3
 # jq is like sed but for json
 brew install jq
 brew install z

@@ -10,7 +10,10 @@ Some applications are worth installing manually since a Brew install will mess w
 
 - Browsers
 - Slack
+- Iterm2
 - VSCode
+- Spoitfy
+- https://rectangleapp.com/
 
 Let's go!
 
