@@ -29,10 +29,29 @@ Let's go!
       [credential]
       	helper = osxkeychain
 
-- Install [nvm](https://github.com/creationix/nvm#installation) and node
 - read and run parts of `setup-a-new-machine.sh`
-- read and run `npm-install.sh`
 - use it. yay!
+
+#### what you get
+
+- Mac OSX default settings (Paul Irish's)
+- homebrew apps:
+  - git
+  - ack
+  - kdiff3
+  - jq
+  - z
+- homebrew cask
+  - rectangle for window management
+  - iterm2
+- oh-my-zsh
+  - git
+  - history substring search
+  - autosuggestions
+  - syntax highlighting on terminal commands
+- functions:
+  - `n`: load `nvm` and use default version
+  - `mkdc`: create directory and `cd` into it
 
 ## Migration
 

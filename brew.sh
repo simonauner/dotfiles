@@ -52,6 +52,7 @@ brew install git
 # brew install kdiff3
 # jq is like sed but for json
 brew install jq
+brew install z
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -53,7 +53,7 @@ ZSH_DISABLE_COMPFIX="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history-substring-search sublime zsh-autosuggestions)
+plugins=(git history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # Load our dotfiles
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
-for file in ~/.{extra,aliases}; do
+for file in ~/.{extra,aliases,functions}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
@@ -105,9 +105,7 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 #source /usr/local/dev-env/ansible/mac_profile
 
-export PATH="$HOME/.yarn/bin:$PATH"
 
-alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
