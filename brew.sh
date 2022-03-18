@@ -53,6 +53,8 @@ brew install git
 # jq is like sed but for json
 brew install jq
 brew install z
+# cat on steroids!
+brew install bat
 
 # Remove outdated versions from the cellar
 brew cleanup

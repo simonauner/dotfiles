@@ -37,6 +37,7 @@ Let's go!
   - git
   - jq
   - z
+  - bat
 - homebrew cask
   - rectangle for window management
   - iterm2
