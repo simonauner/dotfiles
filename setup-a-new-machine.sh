@@ -21,20 +21,20 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 #
-# install all the things
-./brew.sh
-# ./brew-cask.sh
+# brew install
+sh brew.sh
+sh brew-cask.sh
 
-# Install oh-my-zsh
+# Installs oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Download oh-my-zsh honukai theme (https://github.com/oskarkrawczyk/honukai-iterm-zsh):
-# Also change iTerm2 settings, see honukai-iterm-zsh website
+# Downloads oh-my-zsh honukai theme (https://github.com/oskarkrawczyk/honukai-iterm-zsh):
+# You need to manually change iTerm2 settings, see honukai-iterm-zsh website
 git clone https://github.com/oskarkrawczyk/honukai-iterm-zsh.git ~/code/honukai-iterm-zsh
 cp ~/code/honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/
 source ~/.zshrc
 
-# Install zsh-autosuggestions
+# Installs zsh-autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -53,5 +53,5 @@ sh .osx
 # symlinks!
 #   put/move git credentials into ~/.gitconfig.local
 #   http://stackoverflow.com/a/13615531/89484
-./symlink-setup.sh
+sh symlink-setup.sh
 

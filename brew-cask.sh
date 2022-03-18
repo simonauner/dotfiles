@@ -37,7 +37,7 @@ brew install --cask iterm2
 # less often
 #brew cask install disk-inventory-x
 #brew cask install screenflow4 # 4 specifically not 5.
-brew install --cask vlc
+# brew install --cask vlc
 #brew cask install keycastr
 
 

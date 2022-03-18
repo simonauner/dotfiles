@@ -10,10 +10,8 @@ Some applications are worth installing manually since a Brew install will mess w
 
 - Browsers
 - Slack
-- Iterm2
 - VSCode
-- Spoitfy
-- https://rectangleapp.com/
+- Spotify
 - BeardedSpice for media controls
 
 Let's go!
@@ -37,8 +35,6 @@ Let's go!
 - Mac OSX default settings (Paul Irish's)
 - homebrew apps:
   - git
-  - ack
-  - kdiff3
   - jq
   - z
 - homebrew cask
@@ -50,7 +46,6 @@ Let's go!
   - autosuggestions
   - syntax highlighting on terminal commands
 - functions:
-  - `n`: load `nvm` and use default version
   - `mkdc`: create directory and `cd` into it
 
 ## Migration
