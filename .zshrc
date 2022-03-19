@@ -111,5 +111,15 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm use default # get node on the command line whenever a new shell is started
 
+arch_name="$(uname -m)"
+
 # Add brew to command-line
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ "${arch_name}" = "x86_64" ]; then
+    # "Running on native Intel"
+    eval "$(/usr/local/bin/brew shellenv)"
+
+elif [ "${arch_name}" = "arm64" ]; then
+    # echo "Running on ARM"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
