@@ -13,7 +13,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - VSCode
 - Spotify
 - [Hyper](https://hyper.is/)
-- BeardedSpice for media controls
+- [BeardedSpice](https://beardedspice.github.io/) for media controls
 
 Let's go!
 
