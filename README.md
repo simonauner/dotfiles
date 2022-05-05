@@ -12,6 +12,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - Slack
 - VSCode
 - Spotify
+- [Hyper](https://hyper.is/)
 - BeardedSpice for media controls
 
 Let's go!
@@ -40,7 +41,6 @@ Let's go!
   - bat
 - homebrew cask
   - rectangle for window management
-  - iterm2
 - oh-my-zsh
   - git
   - history substring search
