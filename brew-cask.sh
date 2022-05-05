@@ -15,7 +15,7 @@
 brew install --cask rectangle
 
 # dev
-brew install --cask iterm2
+# brew install --cask iterm2
 #brew install Caskroom/versions/sublime-text3
 #brew cask install imagealpha
 #brew cask install imageoptim
