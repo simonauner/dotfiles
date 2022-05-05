@@ -28,8 +28,8 @@ brew upgrade
 # generic colouriser  http://kassiopeia.juls.savba.sk/~garabik/software/grc/
 #brew install grc
 
-# Install wget with IRI support
-#brew install wget --enable-iri
+# Install wget
+brew install wget
 
 # Install more recent versions of some OS X tools
 #brew install vim --override-system-vi
