@@ -84,3 +84,5 @@
 [include]
   # For username / github token / etc
   path = ~/.gitconfig.local
+[pull]
+	rebase = false
