@@ -149,5 +149,5 @@ fi
 #   github.com/rupa/z
 . $(brew --prefix)/etc/profile.d/z.sh
 
-export YVM_DIR=/Users/simonauner/.yvm
+export YVM_DIR=/opt/homebrew/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh

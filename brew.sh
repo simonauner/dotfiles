@@ -56,5 +56,8 @@ brew install z
 # cat on steroids!
 brew install bat
 
+# Yarn version manager
+brew install tophat/bar/yvm
+
 # Remove outdated versions from the cellar
 brew cleanup
