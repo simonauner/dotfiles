@@ -87,9 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# z beats cd most of the time.
-#   github.com/rupa/z
-. ~/code/z/z.sh
+
 
 # Load our dotfiles
 #   ~/.extra can be used for settings you don’t want to commit,
@@ -147,6 +145,9 @@ elif [ "${arch_name}" = "arm64" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# z beats cd most of the time.
+#   github.com/rupa/z
+. $(brew --prefix)/etc/profile.d/z.sh
 
 export YVM_DIR=/Users/simonauner/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
