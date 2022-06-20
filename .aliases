@@ -1,0 +1,2 @@
+# Which process is using a port?
+alias who_port="lsof -i -P | grep LISTEN | grep"
