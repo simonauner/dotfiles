@@ -4,7 +4,15 @@ Based off [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles), which 
 
 ## Setup
 
-#### installing & using
+### Fresh computer
+
+- Install homebrew first, it will install XCode dev tools to get git and so on:
+  ```
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+- Add SSH keys to Github
+
+### Installing & using
 
 Some applications are worth installing manually since a Brew install will mess with future updates:
 
@@ -46,6 +54,7 @@ Let's go!
   - history substring search
   - autosuggestions
   - syntax highlighting on terminal commands
+- [z](https://github.com/rupa/z)
 - functions:
   - `mkdc`: create directory and `cd` into it
 
@@ -53,5 +62,4 @@ Let's go!
 
 Steps to migrate from another computer.
 
-- Export iterm config
 - Copy `.extra`
