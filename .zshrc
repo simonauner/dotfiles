@@ -147,7 +147,7 @@ fi
 
 # z beats cd most of the time.
 #   github.com/rupa/z
-. $(brew --prefix)/etc/profile.d/z.sh
+ . /opt/homebrew/etc/profile.d/z.sh
 
 export YVM_DIR=/opt/homebrew/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
