@@ -29,7 +29,6 @@ sh brew-cask.sh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Downloads oh-my-zsh honukai theme (https://github.com/oskarkrawczyk/honukai-iterm-zsh):
-# You need to manually change iTerm2 settings, see honukai-iterm-zsh website
 git clone https://github.com/oskarkrawczyk/honukai-iterm-zsh.git ~/code/honukai-iterm-zsh
 cp ~/code/honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/
 
