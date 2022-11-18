@@ -145,6 +145,8 @@ elif [ "${arch_name}" = "arm64" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+eval $(thefuck --alias please --enable-experimental-instant-mode)
+
 # z beats cd most of the time.
 #   github.com/rupa/z
  . /opt/homebrew/etc/profile.d/z.sh

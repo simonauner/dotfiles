@@ -56,6 +56,8 @@ brew install z
 # cat on steroids!
 brew install bat
 
+brew install thefuck
+
 # Yarn version manager
 brew install tophat/bar/yvm
 

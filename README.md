@@ -6,7 +6,7 @@ Based off [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles), which 
 
 ### Fresh computer
 
-- Install homebrew first, it will install XCode dev tools to get git and so on:
+- Install homebrew first, it will install XCode dev tools to get `git` and so on:
   ```
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
