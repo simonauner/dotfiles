@@ -23,7 +23,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - [Hyper](https://hyper.is/)
 - [BeardedSpice](https://beardedspice.github.io/) for media controls
 
-Let's go!
+#### Let's go!
 
 - fork this to your own acct
 - clone that repo
@@ -39,7 +39,11 @@ Let's go!
 - read and run parts of `setup-a-new-machine.sh`
 - use it. yay!
 
-#### what you get
+#### Configuration of applications
+
+- [Make iTerm2 open split tabs in same directory](https://apple.stackexchange.com/questions/337377/iterm2-split-vertically-with-current-profile-with-same-working-directory/337386#337386)
+
+### What you get
 
 - Mac OSX default settings (Paul Irish's)
 - homebrew apps:
@@ -49,6 +53,8 @@ Let's go!
   - bat
 - homebrew cask
   - rectangle for window management
+  - iterm2
+  - insomna (better Postman)
 - oh-my-zsh
   - git
   - history substring search
