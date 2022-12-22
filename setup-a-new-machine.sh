@@ -39,6 +39,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
+# pnpm
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 # go read mathias, paulmillr, gf3, alraa's dotfiles to see what to update with.
 
 # set up osx defaults
