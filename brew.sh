@@ -59,7 +59,7 @@ brew install bat
 brew install thefuck
 
 # Yarn version manager
-brew install tophat/bar/yvm
+# brew install tophat/bar/yvm
 
 brew install derailed/k9s/k9s
 
