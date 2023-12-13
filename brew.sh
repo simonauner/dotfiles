@@ -63,5 +63,7 @@ brew install thefuck
 
 # brew install derailed/k9s/k9s
 
+brew install git-absorb
+
 # Remove outdated versions from the cellar
 brew cleanup
