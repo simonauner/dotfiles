@@ -133,6 +133,9 @@ npx() {
   npx $@
 }
 
+# Define VSCode as React editor, makes file paths clickable in terminal
+export REACT_EDITOR=code
+
 arch_name="$(uname -m)"
 
 # Add brew to command-line
@@ -149,7 +152,7 @@ eval $(thefuck --alias please --enable-experimental-instant-mode)
 
 # z beats cd most of the time.
 #   github.com/rupa/z
- . /opt/homebrew/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 export YVM_DIR=/opt/homebrew/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
