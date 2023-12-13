@@ -61,7 +61,7 @@ brew install thefuck
 # Yarn version manager
 # brew install tophat/bar/yvm
 
-brew install derailed/k9s/k9s
+# brew install derailed/k9s/k9s
 
 # Remove outdated versions from the cellar
 brew cleanup
