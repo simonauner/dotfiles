@@ -3,3 +3,7 @@ mkcd() {
     mkdir "$1"
     cd "$1"
 }
+
+delete-merged-branches() {
+    git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d
+}
