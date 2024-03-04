@@ -379,7 +379,7 @@ defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock show-recents -bool FALSE
 
 # Automatically hide and show the Dock
-#defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
@@ -389,6 +389,9 @@ defaults write com.apple.dock showhidden -bool true
 
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+
+# Place dock to the left
+defaults write com.apple.dock "orientation" -string "left" && killall Dock
 
 # Add iOS Simulator to Launchpad
 #sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app" "/Applications/iOS Simulator.app"
