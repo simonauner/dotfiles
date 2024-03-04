@@ -156,3 +156,11 @@ eval $(thefuck --alias please --enable-experimental-instant-mode)
 
 export YVM_DIR=/opt/homebrew/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# pnpm
+export PNPM_HOME="/Users/simonauner/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
