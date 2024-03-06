@@ -13,6 +13,7 @@
 #brew cask install rescuetime
 # cask install flux
 brew install --cask rectangle
+brew install raycast --cask
 
 # dev
 brew install --cask iterm2
