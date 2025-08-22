@@ -103,35 +103,26 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 #source /usr/local/dev-env/ansible/mac_profile
 
-# Thanks https://til-engineering.nulogy.com/Slow-Terminal-Startup-Tip-Lazy-Load-NVM/
-lazynvm() {
-  unset -f nvm node npm npx
-  export NVM_DIR=~/.nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-  if [ -f "$NVM_DIR/bash_completion" ]; then
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# Load nvm (Homebrew on Apple Silicon)
+export NVM_DIR="$HOME/.nvm"
+[[ -s "/opt/homebrew/opt/nvm/nvm.sh" ]] && source "/opt/homebrew/opt/nvm/nvm.sh"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+
+__ensure_nvm() {
+  if [[ -f .nvmrc ]]; then
+    nvm use --silent >/dev/null 2>&1
+  elif [[ -f package.json ]]; then
+    local wanted
+    wanted=$(command jq -r '.engines.node // empty' package.json 2>/dev/null)
+    [[ -n "$wanted" ]] && nvm use "$wanted" >/dev/null 2>&1 || true
   fi
 }
 
-nvm() {
-  lazynvm
-  nvm $@
-}
-
-node() {
-  lazynvm
-  node $@
-}
-
-npm() {
-  lazynvm
-  npm $@
-}
-
-npx() {
-  lazynvm
-  npx $@
-}
+npm()  { __ensure_nvm; command npm  "$@"; }
+pnpm() { __ensure_nvm; command pnpm "$@"; }
+npx()  { __ensure_nvm; command npx  "$@"; }
+node() { __ensure_nvm; command node "$@"; }
 
 # Define VSCode as React editor, makes file paths clickable in terminal
 export REACT_EDITOR=code
