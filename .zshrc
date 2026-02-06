@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+if [[ $INTELLIJ_ENVIRONMENT_READER ]]; then
+return
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -105,11 +109,27 @@ bindkey "^[^[[C" forward-word
 
 # Load nvm (Homebrew on Apple Silicon)
 export NVM_DIR="$HOME/.nvm"
-[[ -s "/opt/homebrew/opt/nvm/nvm.sh" ]] && source "/opt/homebrew/opt/nvm/nvm.sh"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+# Lazy-load nvm only when needed
+__NVM_LOADED=0
+__load_nvm() {
+  if [[ $__NVM_LOADED -eq 1 ]]; then
+    return
+  fi
+  if [[ -s "/opt/homebrew/opt/nvm/nvm.sh" ]]; then
+    source "/opt/homebrew/opt/nvm/nvm.sh"
+  elif [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    source "$NVM_DIR/nvm.sh"
+  fi
+  __NVM_LOADED=1
+}
 
 
 __ensure_nvm() {
+  __load_nvm
+  if ! command -v nvm >/dev/null 2>&1; then
+    return
+  fi
   if [[ -f .nvmrc ]]; then
     nvm use --silent >/dev/null 2>&1
   elif [[ -f package.json ]]; then
@@ -124,29 +144,41 @@ pnpm() { __ensure_nvm; command pnpm "$@"; }
 npx()  { __ensure_nvm; command npx  "$@"; }
 node() { __ensure_nvm; command node "$@"; }
 
-# Define VSCode as React editor, makes file paths clickable in terminal
-export REACT_EDITOR=code
+# Define Cursor as React editor, makes file paths clickable in terminal
+export REACT_EDITOR=cursor
 
 arch_name="$(uname -m)"
 
 # Add brew to command-line
-if [ "${arch_name}" = "x86_64" ]; then
-    # "Running on native Intel"
-    eval "$(/usr/local/bin/brew shellenv)"
+__brew_cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}"
+__brew_cache_file="$__brew_cache_dir/brew_shellenv.${arch_name}.zsh"
+mkdir -p "$__brew_cache_dir" 2>/dev/null
 
-elif [ "${arch_name}" = "arm64" ]; then
-    # echo "Running on ARM"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ "${arch_name}" = "x86_64" ]; then
+  __brew_bin="/usr/local/bin/brew"
+else
+  __brew_bin="/opt/homebrew/bin/brew"
 fi
 
-eval $(thefuck --alias please --enable-experimental-instant-mode)
+if [ -x "$__brew_bin" ]; then
+  if [ ! -s "$__brew_cache_file" ]; then
+    "$__brew_bin" shellenv >| "$__brew_cache_file"
+  fi
+  source "$__brew_cache_file"
+fi
 
 # z beats cd most of the time.
 #   github.com/rupa/z
 . /opt/homebrew/etc/profile.d/z.sh
 
 export YVM_DIR=/opt/homebrew/opt/yvm
-[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+if [[ -r "$YVM_DIR/yvm.sh" ]]; then
+  yvm() {
+    unset -f yvm
+    . "$YVM_DIR/yvm.sh"
+    yvm "$@"
+  }
+fi
 
 # pnpm
 export PNPM_HOME="/Users/simonauner/Library/pnpm"
@@ -155,3 +187,18 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/simonauner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/simonauner/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/simonauner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/simonauner/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/simonauner/.bun/_bun" ] && source "/Users/simonauner/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
