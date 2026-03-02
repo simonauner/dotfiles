@@ -139,6 +139,7 @@ __ensure_nvm() {
   fi
 }
 
+nvm()  { unset -f nvm; __load_nvm; nvm  "$@"; }
 npm()  { __ensure_nvm; command npm  "$@"; }
 pnpm() { __ensure_nvm; command pnpm "$@"; }
 npx()  { __ensure_nvm; command npx  "$@"; }
