@@ -11,7 +11,7 @@ delete-merged-branches() {
 # Interactive rebase from the repo's default branch (falls back to master)
 grim() {
     local base
-    base=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
+    base=$(git mainormaster 2>/dev/null)
     base=${base:-master}
     git rebase -i "$(git merge-base "$base" HEAD)"
 }
