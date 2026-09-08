@@ -66,6 +66,9 @@ Some applications are worth installing manually since a Brew install will mess w
   - `git-archive-merged-branches`: tags and deletes local branches already
     merged into main — including squash-merged ones — usable as
     `git archive-merged-branches`
+  - `macos-prefs-diff.sh`: diffs live `defaults` state against every
+    `defaults write` line in `.osx`, to catch drift between the script and
+    reality. Read-only.
 
 ## Migration
 
