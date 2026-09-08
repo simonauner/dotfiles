@@ -48,7 +48,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - homebrew apps:
   - git
   - jq
-  - z
+  - zoxide
   - bat
 - homebrew cask
   - rectangle for window management
@@ -59,7 +59,7 @@ Some applications are worth installing manually since a Brew install will mess w
   - history substring search
   - autosuggestions
   - syntax highlighting on terminal commands
-- [z](https://github.com/rupa/z)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - functions:
   - `mkdc`: create directory and `cd` into it
 
