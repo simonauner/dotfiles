@@ -1,0 +1,25 @@
+.gitignore
+  s_c48d95f5eb802d::t_f91ba5545ea7fd 10,12
+  s_c48d95f5eb802d::t_c25eee9e34849f 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "53f2d246431b7c3e7e55ab00496e26fc0936b1e8",
+  "prompts": {},
+  "humans": {
+    "h_4a2cc01b736e43": {
+      "author": "Simon Aunér"
+    }
+  },
+  "sessions": {
+    "s_c48d95f5eb802d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "965b5509-71f5-4b74-a05c-616cee75f73c",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
