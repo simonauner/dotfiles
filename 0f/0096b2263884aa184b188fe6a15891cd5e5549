@@ -1,0 +1,25 @@
+symlink-setup.sh
+  s_bbe836d6b0cf99::t_ef3c8cdd0f726e 145
+.zshrc
+  s_bbe836d6b0cf99::t_378620805a61e8 64-67
+bin/git-archive-merged-branches
+  s_bbe836d6b0cf99::t_ec17531818c627 1-178
+README.md
+  s_bbe836d6b0cf99::t_a9408af7e40e36 65-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "0f0096b2263884aa184b188fe6a15891cd5e5549",
+  "prompts": {},
+  "sessions": {
+    "s_bbe836d6b0cf99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0084e86d-848c-4ca3-888f-32f9569401e0",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
