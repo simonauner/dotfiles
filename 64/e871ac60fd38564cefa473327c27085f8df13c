@@ -1,0 +1,24 @@
+.zshrc
+  s_bbe836d6b0cf99::t_7b19742353d814 171-174
+brew.sh
+  s_bbe836d6b0cf99::t_0f34ab837612bf 55-56
+README.md
+  s_bbe836d6b0cf99::t_90ef7cbd5aa498 51
+  s_bbe836d6b0cf99::t_ca6f003da4f849 62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "64e871ac60fd38564cefa473327c27085f8df13c",
+  "prompts": {},
+  "sessions": {
+    "s_bbe836d6b0cf99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0084e86d-848c-4ca3-888f-32f9569401e0",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
