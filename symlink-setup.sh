@@ -142,6 +142,7 @@ print_success() {
 
 # finds all .dotfiles in this folder
 FILES_TO_SYMLINK=($(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|' | sort))
+FILES_TO_SYMLINK+=("bin") # symlink the whole bin/ dir too
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

@@ -62,6 +62,10 @@ Some applications are worth installing manually since a Brew install will mess w
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - functions:
   - `mkdc`: create directory and `cd` into it
+- `bin/` scripts (symlinked to `~/bin`, which is on `PATH`):
+  - `git-archive-merged-branches`: tags and deletes local branches already
+    merged into main — including squash-merged ones — usable as
+    `git archive-merged-branches`
 
 ## Migration
 
