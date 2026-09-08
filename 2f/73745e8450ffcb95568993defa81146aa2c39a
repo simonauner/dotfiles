@@ -1,0 +1,19 @@
+.functions
+  s_bbe836d6b0cf99::t_750e599423e752 10-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "2f73745e8450ffcb95568993defa81146aa2c39a",
+  "prompts": {},
+  "sessions": {
+    "s_bbe836d6b0cf99": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "0084e86d-848c-4ca3-888f-32f9569401e0",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Simon Aunér <simonauner@gmail.com>"
+    }
+  }
+}
