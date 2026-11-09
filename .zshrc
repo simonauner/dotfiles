@@ -64,6 +64,7 @@ plugins=(git history-substring-search zsh-autosuggestions)
 # Personal scripts, symlinked from dotfiles/bin. `git-*` scripts here become
 # `git <subcommand>` for free.
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

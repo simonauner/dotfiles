@@ -42,26 +42,16 @@ Some applications are worth installing manually since a Brew install will mess w
 
 - [Make iTerm2 open split tabs in same directory](https://apple.stackexchange.com/questions/337377/iterm2-split-vertically-with-current-profile-with-same-working-directory/337386#337386)
 
-#### Claude Code: personal and work accounts
+#### Claude Code
 
-The `claude()` function in `.functions` picks the account by folder:
+One Claude account per machine (work machine: work account, private machine:
+personal account). Log in once with `claude`, then `/login`.
 
-- anywhere under `~/code/work` → work account, config in `~/.claude-work`
-- everywhere else → personal account, config in `~/.claude`
-
-`claude/settings.json` (symlinked by `symlink-setup.sh`) is the personal one.
-The work account keeps its own `~/.claude-work/settings.json` locally, outside
-this repo; on a new machine, copy it over by hand. Secrets such as
-`CUBIC_API_KEY` go in `~/.extra`, never in a settings file.
-
-Log in once per account:
-
-```
-cd ~ && claude                  # then /login with the personal account
-cd ~/code/work/<repo> && claude # then /login with the work account
-```
-
-The Claude desktop app ignores this and uses whichever account it is logged in to.
+`claude/settings.json` is the shared base and `symlink-setup.sh` links it to
+`~/.claude/settings.json`. On the work machine, skip that link and keep a local
+`~/.claude/settings.json` instead, since it lists work plugins that don't belong
+in this public repo. Secrets such as `CUBIC_API_KEY` go in `~/.extra`, never in a
+settings file.
 
 ### What you get
 
