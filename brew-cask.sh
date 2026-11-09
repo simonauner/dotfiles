@@ -22,7 +22,7 @@ brew install --cask iterm2
 #brew install Caskroom/versions/sublime-text3
 #brew cask install imagealpha
 #brew cask install imageoptim
-brew install --cask insomnia
+# brew install --cask insomnia
 
 # fun
 #brew cask install limechat
