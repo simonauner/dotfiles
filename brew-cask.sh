@@ -42,11 +42,6 @@ brew install --cask iterm2
 #brew cask install disk-inventory-x
 #brew cask install screenflow4 # 4 specifically not 5.
 # brew install --cask vlc
-#brew cask install keycastr
+brew cask install keycastr
+brew install --cask dotnet-sdk
 
-
-# Not on cask but I want regardless.
-
-# 3Hub
-# File Multi Tool 5
-# Phosphor
