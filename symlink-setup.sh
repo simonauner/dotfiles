@@ -144,11 +144,13 @@ print_success() {
 FILES_TO_SYMLINK=($(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .osx | sed -e 's|//|/|' | sed -e 's|./.|.|' | sort))
 FILES_TO_SYMLINK+=("bin") # symlink the whole bin/ dir too
 FILES_TO_SYMLINK+=(".config/borders/bordersrc")
-# Claude Code, as "source:target". Answer "n" for settings.json on the work
-# machine, which keeps a local one (see README). Kept out of a .claude/ folder so
+# Claude Code, as "source:target". Answer "n" for settings.json and CLAUDE.md on
+# the work machine, which keeps local ones (see README). Kept out of a .claude/ folder so
 # this repo doesn't pick it up as project settings.
-FILES_TO_SYMLINK+=("claude/settings.json:.claude/settings.json")
+FILES_TO_SYMLINK+=("claude/settings.json:.claude/settings.json" "claude/CLAUDE.md:.claude/CLAUDE.md")
 FILES_TO_SYMLINK+=("claude/skills/recover-disk-space:.claude/skills/recover-disk-space")
+# pr-screenshots is also a Codex skill; its SKILL.md calls the script via ~/.codex.
+FILES_TO_SYMLINK+=("claude/skills/pr-screenshots:.claude/skills/pr-screenshots" "claude/skills/pr-screenshots:.codex/skills/pr-screenshots")
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

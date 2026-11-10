@@ -47,9 +47,10 @@ Some applications are worth installing manually since a Brew install will mess w
 One Claude account per machine (work machine: work account, private machine:
 personal account). Log in once with `claude`, then `/login`.
 
-`claude/settings.json` is the shared base and `symlink-setup.sh` links it to
-`~/.claude/settings.json`. On the work machine, skip that link and keep a local
-`~/.claude/settings.json` instead, since it lists work plugins that don't belong
+`claude/settings.json` and `claude/CLAUDE.md` are the shared base and
+`symlink-setup.sh` links them into `~/.claude/`, along with the skills in
+`claude/skills/`. On the work machine, skip the two file links and keep local
+copies instead, since they hold work plugins and instructions that don't belong
 in this public repo. Secrets such as `CUBIC_API_KEY` go in `~/.extra`, never in a
 settings file.
 
