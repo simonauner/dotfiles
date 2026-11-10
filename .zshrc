@@ -212,3 +212,4 @@ if [ -f '/Users/simonauner/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.docker/bin:$PATH"
