@@ -20,7 +20,7 @@ Some applications are worth installing manually since a Brew install will mess w
 - Slack
 - VSCode
 - Spotify
-- [BeardedSpice](https://beardedspice.github.io/) for media controls
+- [MacMediaKeyForwarder](https://github.com/quentinlesceller/macmediakeyforwarder) for media controls
 
 #### Let's go!
 
