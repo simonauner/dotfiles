@@ -10,6 +10,9 @@
 # per-user work identity override, see .gitconfig.local
 .gitconfig-work
 
+# work-related brew installs
+brew-work.sh
+
 # local configs, aliases, paths etc
 .extra
 
