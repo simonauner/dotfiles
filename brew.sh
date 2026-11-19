@@ -59,8 +59,6 @@ brew install bat
 # fnm is better than nvm
 brew install fnm
 
-brew install thefuck
-
 # Yarn version manager
 # brew install tophat/bar/yvm
 
