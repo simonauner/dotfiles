@@ -21,9 +21,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 #
-# brew install
-sh brew.sh
-sh brew-cask.sh
+# brew install, see Brewfile
+brew bundle
 
 # Installs oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -57,15 +57,8 @@ settings file.
 ### What you get
 
 - Mac OSX default settings (Paul Irish's)
-- homebrew apps:
-  - git
-  - jq
-  - zoxide
-  - bat
-- homebrew cask
-  - rectangle for window management
-  - iterm2
-  - insomna (better Postman)
+- homebrew formulae and casks from `Brewfile` (`brew bundle`). `brew bundle
+  check` and `brew bundle cleanup` show drift between it and the machine.
 - oh-my-zsh
   - git
   - history substring search
