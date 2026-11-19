@@ -14,7 +14,7 @@
 brew-work.sh
 
 # machine-specific brew packages, loaded by Brewfile
-.Brewfile.local
+Brewfile.local
 
 # local configs, aliases, paths etc
 .extra

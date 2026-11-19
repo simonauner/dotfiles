@@ -22,5 +22,5 @@ cask "keycastr"
 cask "rectangle"
 cask "simonauner/tap/lotsen"
 
-local = File.expand_path("~/.Brewfile.local")
+local = File.expand_path("~/Brewfile.local")
 instance_eval(File.read(local)) if File.exist?(local)
