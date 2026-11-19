@@ -67,10 +67,5 @@ brew install fnm
 brew install git-absorb
 brew install gh
 
-# coloured border around the focused window, config in .config/borders/bordersrc
-brew tap FelixKratz/formulae
-brew install borders
-brew services start borders
-
 # Remove outdated versions from the cellar
 brew cleanup

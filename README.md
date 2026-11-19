@@ -62,8 +62,6 @@ settings file.
   - jq
   - zoxide
   - bat
-  - [borders](https://github.com/FelixKratz/JankyBorders): orange border around
-    the focused window, so you can tell which one Cmd+Tab landed on
 - homebrew cask
   - rectangle for window management
   - iterm2
