@@ -1,6 +1,7 @@
 # Install with `brew bundle`. Check for drift with `brew bundle check` and list
 # installed packages missing from this file with `brew bundle cleanup`.
-# Machine-specific packages go in ~/.Brewfile.local, which is loaded at the end.
+# Machine-specific packages go in the uncommitted .Brewfile.local in this repo,
+# which symlink-setup.sh links to ~/.Brewfile.local and which is loaded at the end.
 
 tap "simonauner/tap"
 
