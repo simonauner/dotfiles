@@ -115,46 +115,6 @@ bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 #source /usr/local/dev-env/ansible/mac_profile
 
-# Load nvm (Homebrew on Apple Silicon)
-export NVM_DIR="$HOME/.nvm"
-
-# Lazy-load nvm only when needed.
-# nvm.sh itself calls bare `node`/`npm` (often in $(...) subshells), which hits
-# the wrappers below. __NVM_BUSY makes those nested calls fall straight through
-# to the real binary; without it every nested call re-sourced nvm.sh and forked
-# zsh endlessly. These functions also end up in non-interactive shells (e.g.
-# Claude Code's shell snapshot), where something else may source nvm.sh first.
-__load_nvm() {
-  typeset -f nvm_ls_current >/dev/null && return
-  local __NVM_BUSY=1
-  if [[ -s "/opt/homebrew/opt/nvm/nvm.sh" ]]; then
-    source "/opt/homebrew/opt/nvm/nvm.sh"
-  elif [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    source "$NVM_DIR/nvm.sh"
-  fi
-}
-
-__ensure_nvm() {
-  [[ -n ${__NVM_BUSY:-} ]] && return
-  local __NVM_BUSY=1
-  __load_nvm
-  if ! typeset -f nvm_ls_current >/dev/null; then
-    return
-  fi
-  if [[ -f .nvmrc ]]; then
-    nvm use --silent >/dev/null 2>&1
-  elif [[ -f package.json ]]; then
-    local wanted
-    wanted=$(command jq -r '.engines.node // empty' package.json 2>/dev/null)
-    [[ -n "$wanted" ]] && nvm use "$wanted" >/dev/null 2>&1 || true
-  fi
-}
-
-nvm()  { unset -f nvm; __load_nvm; nvm  "$@"; }
-npm()  { __ensure_nvm; command npm  "$@"; }
-pnpm() { __ensure_nvm; command pnpm "$@"; }
-npx()  { __ensure_nvm; command npx  "$@"; }
-node() { __ensure_nvm; command node "$@"; }
 
 # Define Cursor as React editor, makes file paths clickable in terminal
 export REACT_EDITOR=cursor
@@ -217,3 +177,6 @@ if [ -f '/Users/simonauner/google-cloud-sdk/completion.zsh.inc' ]; then . '/User
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.docker/bin:$PATH"
+
+# fnm switches node version on cd
+eval "$(fnm env --use-on-cd --shell zsh)"

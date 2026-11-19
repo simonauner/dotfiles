@@ -36,9 +36,6 @@ cp ~/code/honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# nvm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-
 # pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
