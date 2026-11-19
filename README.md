@@ -59,6 +59,7 @@ settings file.
 - Mac OSX default settings (Paul Irish's)
 - homebrew formulae and casks from `Brewfile` (`brew bundle`). `brew bundle
   check` and `brew bundle cleanup` show drift between it and the machine.
+  Packages only some machines need go in an uncommitted `~/.Brewfile.local`.
 - oh-my-zsh
   - git
   - history substring search
