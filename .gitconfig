@@ -54,6 +54,7 @@
 	changed = green
 	untracked = cyan
 [merge]
+	conflictStyle = zdiff3
 	tool = kdiff3
 	keepBackup = false
 
@@ -82,6 +83,7 @@
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
 	default = current
+	autoSetupRemote = true
 
 
 
@@ -89,6 +91,18 @@
   # For username / github token / etc
   path = ~/.gitconfig.local
 [pull]
-	rebase = false
+	rebase = true
+[rebase]
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[diff]
+	algorithm = histogram
+[branch]
+	sort = -committerdate
 [checkout]
 	workers = 0
